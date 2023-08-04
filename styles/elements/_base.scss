@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "GraphikLCG";
+    font-weight: 400;
+    src: url(/Fonts/GraphikLCG-Regular.ttf);
+}
+
+@font-face {
+    font-family: "GraphikLCG";
+    font-weight: 600;
+    src: url(/Fonts/GraphikLCG-Semibold.ttf);
+}
+
+html {
+    font-family: "GraphikLCG", sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 55px;
+    margin: 0 auto;
+    
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+

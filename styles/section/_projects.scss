@@ -1,0 +1,78 @@
+.projects {
+    padding: 90px 0 150px 0;
+}
+
+.projects .projects-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+        
+}
+
+.projects .item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 250px;
+}
+
+.projects .item:last-child {
+    margin-bottom: 0;
+}
+
+.projects .item .block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 494px;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.projects .item .title {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+.projects .item .text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.projects .item .link {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.projects .item .link:hover {
+    color: #FF6336;
+}
+
+.projects .item .image {
+    max-width: 632px;
+    height: 632px;
+    object-fit: cover;
+}
+
+.projects .item:last-child .image {
+    height: 577px;
+}
+
+.projects .item:nth-child(even) .image {
+    order: 1;
+}
+
+.projects .item:nth-child(even) .block {
+    order: 2;
+    margin-right: 0;
+}

@@ -2,8 +2,17 @@
     background: #DABC98;
     padding: 80px 0;
 
+    @media screen and (max-width: 1000px) {
+        padding: 30px 0;
+    }
+
     .rating-inner {
         display: flex;
+
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+            align-items: center;
+        }
 
         .block {
             display: flex;
@@ -12,11 +21,36 @@
             width: 100%;
             border-right: 1px solid black;
 
+            @media screen and (max-width: 1000px) {
+                border-right: none;
+            }
+
+            .image {
+
+                @media screen and (max-width: 540px) {
+                    display: none;
+                }
+                
+            }
+
             .title {
                 font-size: 35px;
                 font-weight: 600;
                 line-height: 50px;
                 margin-left: 67px;
+
+                @include respond(880px) {
+                    @include fontSize40;
+                    margin-bottom: 20px;
+                    
+                }
+            
+                @media screen and (max-width: 540px) {
+                    font-size: 36px;
+                    line-height: 40px;
+                    margin: 20px 20px;
+                    text-align: center;
+                }
             }
         }
 
@@ -25,14 +59,28 @@
             padding-left: 70px;
             align-items: center;
 
+            @media screen and (max-width: 540px) {
+                padding-left: 10px;
+                flex-direction: column;
+            }
+
+            
             .rating-item {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 margin-right: 70px;
 
+                @media screen and (max-width: 540px) {
+                    margin-right: 10px;
+                }
+
                 &:last-child {
                     margin-right: 0;
+
+                    @media screen and (max-width: 540px) {
+                        margin-right: 10px;
+                    }
                 }
 
                 &-logo {

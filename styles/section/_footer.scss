@@ -5,7 +5,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
     }
 
     &__right {
@@ -15,14 +18,27 @@
         max-width: 411px;
         width: 100%;
 
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         &__image {
             width: 90px;
             height: 21px;
             margin-right: 14px;
+
+            @media screen and (max-width: 600px) {
+                margin-bottom: 20px;
+            }
         }
 
         &__text {
             @include fontSize12;
+
+            @media screen and (max-width: 600px) {
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -33,6 +49,10 @@
         max-width: 109px;
         width: 100%;
         margin-right: 76px;
+
+        @media screen and (max-width: 670px) {
+            margin-right: 20px;
+        }
 
         &__text {
             @include fontSize12;

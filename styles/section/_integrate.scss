@@ -4,7 +4,6 @@
 
     .integrate-inner {
         display: flex;
-        
 
         .block {
             display: flex;
@@ -18,6 +17,16 @@
                 font-size: 65px;
                 font-weight: 600;
                 line-height: 75px;
+
+                @include respond(880px) {
+                    @include fontSize40;
+                    margin-bottom: 20px;
+                }
+            
+                @media screen and (max-width: 540px) {
+                    font-size: 36px;
+                    line-height: 40px;
+                }
             }
 
             .text {
@@ -34,8 +43,17 @@
                 width: 1023px;
                 height: 445px;
                 margin-bottom: 32px;
+
+                @media screen and (max-width: 1350px) {
+                    width: 700px;
+                    height: 300px;
+                    margin-bottom: 20px;
+                }
+
+                @media screen and (max-width: 770px) {
+                    display: none;
+                }
             }
         }
-        
     }
 }

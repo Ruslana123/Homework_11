@@ -1,6 +1,11 @@
 .companies {
     background: #FF9C7D;
     padding: 98px 75px 94px;
+
+    @include respond(880px) {
+        padding: 40px 0;
+
+    }
 }
 
 .companies .companies-inner {
@@ -18,19 +23,47 @@
     width: 100%;
     text-align: center;
     margin-bottom: 70px;
+
+    @include respond(880px) {
+        @include fontSize40;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 540px) {
+        font-size: 36px;
+        line-height: 40px;
+    }
 }
 
 .companies .companies-inner .companies-name {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    @include respond(1400px) {
+        flex-wrap: wrap;
+    }
 }
 
 .companies .companies-inner .companies-name .name {
     margin-right: 102px;
 
+    
+    @include respond(1400px) {
+        margin: 30px;
+    }
+
+    @media screen and (max-width: 540px) {
+        width: calc(50% - 60px);
+        height: 50px;
+    }
+
     &:last-child {
         margin-right: 0;
+
+        @include respond(1400px) {
+            margin: 30px;
+        }
     }
 
 }

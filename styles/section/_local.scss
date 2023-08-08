@@ -1,6 +1,5 @@
 .local {
     background: #FFF8E4;
-        
 }
 
 .local .local-inner {
@@ -9,6 +8,12 @@
     align-items: center;
     margin: 0 20px;
     padding: 120px 0 92px;
+
+    @media screen and (max-width: 1260px) {
+        margin: 0 10px;
+        padding: 50px 0 40px;
+        
+    }
 }
 
 .local .local-inner .title {
@@ -17,7 +22,17 @@
     font-size: 50px;
     font-weight: 600;
     line-height: 60px;
-    margin-bottom: 58px; 
+    margin-bottom: 58px;
+    
+    @include respond(880px) {
+        @include fontSize40;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 540px) {
+        font-size: 36px;
+        line-height: 40px;
+    }
 }
 
 .local .local-inner .cards {
@@ -27,6 +42,11 @@
     flex-wrap: wrap;
     width: 100%;
     padding: 0 40px;
+
+    @media screen and (max-width: 1260px) {
+        padding: 0 20px;
+        
+    }
 }
 
 .local .local-inner .cards .card-inner {
@@ -36,6 +56,23 @@
     max-width: 330px;
     width: 100%;
     padding-bottom: 56px;
+
+    @media screen and (max-width: 1260px) {
+        width: calc(33% - 40px);
+    }
+
+    @media screen and (max-width: 970px) {
+        width: calc(50% - 30px);
+    }
+
+    @media screen and (max-width: 700px) {
+        max-width: none;
+        width: 100%;
+    }
+
+    @include respond(880px) {
+        padding-bottom: 20px;
+    }
 }
 
 .local .local-inner .cards .card-inner img {

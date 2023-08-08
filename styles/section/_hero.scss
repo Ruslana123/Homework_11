@@ -1,11 +1,33 @@
 .hero {
     padding: 130px 0 172px 0;
+
+    @include respond(1330px) {
+        position: relative;
+    }
+    
+    @include respond(880px) {
+        padding: 50px 0 50px 0;
+    }
+
+    .btn {
+        @include respond(450px) {
+            width: 100%;
+        }
+    }
 }
 
 .hero .hero-inner {
     max-width: 552px;
     width: 100%;
     position: relative;
+
+    @include respond(1330px) {
+        position: unset;
+    }
+
+    @include respond(880px) {
+        max-width: none;
+    }
 }
 
 .hero .hero-inner::after {
@@ -17,7 +39,21 @@
     top: 22px;
     left: calc(100% - 13px);
     z-index: -1;
-    
+
+    @include respond(1330px) {
+        content: "";
+        width: 400px;
+        height: 400px;
+        top: 200px;
+        left: calc(100% - 450px);
+        background-image: url(/images/Hero-img.png);
+        background-size: 400px, 400px, cover;
+        background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 1030px) {
+        display: none;
+    }
 }
 
 .hero .title {
@@ -25,6 +61,16 @@
     font-weight: 600;
     line-height: 70px;
     margin-bottom: 50px;
+
+    @include respond(880px) {
+        @include fontSize40;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 540px) {
+        font-size: 36px;
+        line-height: 40px;
+    }
 }
 
 .hero .text {
@@ -34,6 +80,19 @@
     max-width: 470px;
     width: 100%;
     margin-bottom: 50px;
+
+    @include respond(880px) {
+        font-size: 16px;
+        line-height: 26px;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    @include respond(450px) {
+        & + .btn.primary.large {
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .hero .sub-text {

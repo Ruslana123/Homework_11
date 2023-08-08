@@ -20,7 +20,16 @@
                 font-weight: 600;
                 line-height: 75px;
                 margin-bottom: 29px;
+
+                @include respond(880px) {
+                    @include fontSize40;
+                    margin-bottom: 20px;
+                }
             
+                @media screen and (max-width: 540px) {
+                    font-size: 36px;
+                    line-height: 40px;
+                }
             }
 
             .text {
@@ -31,7 +40,5 @@
                 margin-bottom: 54px;
             }
         }
-
     }
-    
 }

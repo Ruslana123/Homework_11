@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-        
 }
 
 .projects .item {
@@ -16,6 +15,11 @@
     justify-content: space-between;
     padding: 0 20px;
     margin-bottom: 250px;
+
+    @include respond(880px) {
+        margin-bottom: 80px;
+        flex-direction: column;
+    }
 }
 
 .projects .item:last-child {
@@ -29,6 +33,11 @@
     max-width: 494px;
     width: 100%;
     margin-right: 20px;
+
+    @include respond(880px) {
+        max-width: none;
+        margin: 0 0 20px 0;
+    }
 }
 
 .projects .item .title {
@@ -36,6 +45,16 @@
     font-weight: 600;
     line-height: 60px;
     margin-bottom: 30px;
+
+    @include respond(880px) {
+        @include fontSize40;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 540px) {
+        font-size: 36px;
+        line-height: 40px;
+    }
 }
 
 .projects .item .text {
@@ -62,10 +81,30 @@
     max-width: 632px;
     height: 632px;
     object-fit: cover;
+    margin-right: 20px;
+
+    @include respond(1160px) {
+        max-width: 300px;
+        height: 300px;
+
+    }
+
+    @include respond(880px) {
+        max-width: none;
+        width: 100%;
+        margin-right: 0;
+        order: 2;
+
+    }
 }
 
 .projects .item:last-child .image {
     height: 577px;
+
+    @include respond(1160px) {
+        height: 300px;
+
+    }
 }
 
 .projects .item:nth-child(even) .image {
@@ -75,4 +114,9 @@
 .projects .item:nth-child(even) .block {
     order: 2;
     margin-right: 0;
+
+    @include respond(880px) {
+        order: 1;
+
+    }
 }
